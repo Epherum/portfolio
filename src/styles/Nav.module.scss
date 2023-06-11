@@ -1,0 +1,54 @@
+.nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem 4rem;
+  color: rgb(218, 218, 218);
+
+  .leftNav {
+    display: flex;
+    align-items: center;
+    .logo {
+      color: rgb(218, 218, 218);
+
+      margin-right: 2.5rem;
+    }
+    .request {
+      border: none;
+      background: none;
+      color: rgb(218, 218, 218);
+
+      font-size: 1.2rem;
+      text-decoration: underline 1px;
+      text-underline-offset: 0.4em; /* Add this line */
+
+      cursor: pointer;
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+  .wassim {
+    font-size: 2rem;
+    margin-left: 15rem;
+    font-family: "Ade", serif;
+  }
+  .rightNav {
+    display: flex;
+    align-items: center;
+    .link {
+      margin-left: 3.2rem;
+      color: rgb(218, 218, 218);
+
+      font-size: 1.35rem;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+}
