@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/About.module.scss";
 function About() {
   return (
-    <section className={styles.about}>
+    <section data-scroll-section className={styles.about}>
       <p className={styles.aboutMe}>ABOUT ME</p>
       <p className={styles.description}>
         I am passionate about everything that has to do with Digital Design and

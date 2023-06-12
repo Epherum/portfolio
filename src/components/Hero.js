@@ -1,9 +1,12 @@
 import Image from "next/image";
 import styles from "@/styles/Hero.module.scss";
+import ProfilePic from "../../public/selfie.png";
+import star from "../../public/star.svg";
+import bigStar from "../../public/big-star.svg";
 
 function Hero() {
   return (
-    <section className={styles.hero}>
+    <section data-scroll-section className={styles.hero}>
       <h1 className={styles.title}>
         <span className={styles.hey}>HEY,</span> <br />
         <span className={styles.im}>I'M</span> WASSIM
@@ -27,7 +30,12 @@ function Hero() {
       </ul>
 
       <div className={styles.imageContainer}>
-        <Image src="/selfie.png" alt="My Image" width={1000} height={1000} />
+        <Image
+          src={ProfilePic}
+          alt="My Image"
+          // width={1000}
+          // height={1000}
+        />
       </div>
       <div className={styles.subtitles}>
         <p className={styles.subtitle1}>WEB</p>
@@ -39,10 +47,10 @@ function Hero() {
         solutions.
       </p>
       <div className={styles.starContainer}>
-        <Image src="/star.svg" alt="My Image" width={60} height={60} />
+        <Image src={star} alt="My Image" />
       </div>
       <div className={styles.bigStarContainer}>
-        <Image src="/big-star.svg" alt="My Image" width={300} height={300} />
+        <Image src={bigStar} alt="My Image" />
       </div>
       <button className={styles.black}>IN BLACK</button>
       <button className={styles.color}>IN COLOR</button>

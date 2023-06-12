@@ -2,7 +2,7 @@ import styles from "@/styles/Contact.module.scss";
 
 function Contact() {
   return (
-    <section className={styles.contact}>
+    <section data-scroll-section className={styles.contact}>
       <div className={styles.main}>
         <p className={styles.headline}>
           Interested In <br /> Working Together?

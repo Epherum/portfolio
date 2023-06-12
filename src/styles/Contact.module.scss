@@ -1,5 +1,5 @@
 .contact {
-  height: 90vh;
+  height: 100vh;
   color: rgb(218, 218, 218);
   position: relative;
   .main {
@@ -8,66 +8,69 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
+    flex-direction: column; /* Add this line */
     .headline {
       font-family: "Ade", serif;
-      font-size: 7rem;
-      line-height: 9rem;
-      letter-spacing: 0.3rem;
+      margin-top: min(2rem, 1.7vw);
+      font-size: min(6rem, 5vw);
+      line-height: min(8.3rem, 7vw);
+      letter-spacing: min(0.3rem, 0.2vw);
       font-weight: 100;
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: min(8rem, 7vw);
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
     }
     .drop {
-      margin-top: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      font-size: min(1.3rem, 1vw);
+      margin-bottom: min(0.5rem, 0.4vw);
     }
     .email {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      font-size: 2rem;
+      font-size: min(2.1rem, 1.7vw);
       color: rgb(218, 218, 218);
-      display: flex;
-      justify-content: center;
-      align-items: center;
       text-align: center;
       text-decoration: none;
     }
   }
   .left {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: min(3rem, 2.6vw);
+    bottom: min(3rem, 2.6vw);
+    font-size: min(1.3rem, 1vw);
   }
   .right {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: min(3rem, 2.6vw);
+    bottom: min(3rem, 2.6vw);
+    font-size: min(1.3rem, 1vw);
+    text-align: right;
   }
   .buttons {
     position: absolute;
-    bottom: 0;
+    bottom: min(3rem, 2.6vw);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
+    gap: min(1rem, 0.8vw);
     .button {
       background-color: transparent;
-      margin: 0 1rem;
+      margin: 0 min(1rem, 0.8vw);
       border-radius: 3rem;
       border: 1px solid rgb(218, 218, 218);
-      padding: 1rem 2rem;
-
-      font-size: 1.5rem;
+      padding: min(1rem, 0.8vw) min(2.5rem, 2.2vw);
+      font-size: min(1rem, 0.8vw);
       color: rgb(218, 218, 218);
       text-decoration: none;
       &:hover {

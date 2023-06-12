@@ -3,27 +3,27 @@
   grid-template-columns: 27.2% 24.6% 20% auto;
   grid-template-rows: 50% 50%;
   color: rgb(218, 218, 218);
-  margin-bottom: 12rem;
+  // margin-bottom: min(12rem, 10vw);
   .aboutMe {
     grid-column: 1/2;
     grid-row: 1/2;
-    margin-top: 6rem;
-    margin-left: 4rem;
-    font-size: 1rem;
+    margin-top: min(6rem, 5vw);
+    margin-left: min(4rem, 3.3vw);
+    font-size: min(1rem, 0.8vw);
   }
   .description {
     grid-column: 2/4;
     grid-row: 1/2;
-    margin-top: 5.5rem;
-    margin-left: 0.8rem;
-    font-size: 2.2rem;
-    word-spacing: 0.3rem;
+    margin-top: min(5.5rem, 4.6vw);
+    margin-left: min(0.8rem, 0.7vw);
+    font-size: min(2.2rem, 1.8vw);
+    word-spacing: min(0.3rem, 0.25vw);
     width: 84%;
   }
   .imageContainer {
     grid-column: 4/5;
     grid-row: 1/2;
-    margin-top: 3rem;
+    margin-top: min(3rem, 2.5vw);
     align-self: center;
     justify-self: center;
     transform: scaleX(-1);
@@ -33,31 +33,31 @@
   .desc3 {
     grid-column: 1/2;
     grid-row: 2/3;
-    margin-top: 7.5rem;
-    margin-left: 4rem;
-    font-size: 1rem;
-    word-spacing: 0.3rem;
+    margin-top: min(7.5rem, 6.2vw);
+    margin-left: min(4rem, 3.3vw);
+    font-size: min(1rem, 0.8vw);
+    word-spacing: min(0.3rem, 0.25vw);
     width: 65%;
     //first p tag
     p:nth-child(1) {
-      font-size: 1.4rem;
-      margin-bottom: 2rem;
+      font-size: min(1.4rem, 1.2vw);
+      margin-bottom: min(2rem, 1.7vw);
     }
   }
   .desc2 {
     grid-column: 2/3;
-    margin-left: 1rem;
+    margin-left: min(1rem, 0.8vw);
     width: 80%;
   }
   .desc3 {
     grid-column: 3/4;
-    margin-left: 1rem;
+    margin-left: min(1rem, 0.8vw);
     width: 80%;
   }
   .explore {
-    width: 13rem;
-    height: 3.5rem;
-    border-radius: 3rem;
+    width: min(13rem, 10.8vw);
+    height: min(3.5rem, 2.9vw);
+    border-radius: min(3rem, 2.5vw);
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -65,8 +65,8 @@
     grid-row: 2/3;
     justify-self: end;
     align-self: end;
-    margin-bottom: 3.5rem;
-    margin-right: 4rem;
-    font-size: 1rem;
+    margin-bottom: min(3.5rem, 2.9vw);
+    margin-right: min(4rem, 3.3vw);
+    font-size: min(1rem, 0.8vw);
   }
 }

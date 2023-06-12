@@ -1,22 +1,25 @@
 .hero {
   display: grid;
   grid-template-columns: 34.5% 32.5% auto;
+  grid-template-rows: 14% auto;
   position: relative;
   color: rgb(218, 218, 218);
+  height: 100vh;
 
   .title {
     grid-column: 1 / 3;
+    grid-row: 2/3;
     .hey {
-      font-size: 7rem;
+      font-size: min(6.5rem, 5.4vw);
       letter-spacing: 0rem;
     }
     .im {
-      letter-spacing: -0.3rem;
+      letter-spacing: min(-0.3rem, -0.3vw);
     }
     position: absolute;
-    top: 9rem;
-    left: 5rem;
-    font-size: 6.3rem;
+    top: min(9rem, 7.5vw);
+    left: min(5rem, 4.2vw);
+    font-size: min(6.3rem, 5.2vw);
     line-height: 1;
     letter-spacing: 0.3rem;
     font-family: "Ade", serif;
@@ -24,28 +27,28 @@
   }
   .links {
     grid-column: 1 / 2;
+    grid-row: 2/3;
     position: absolute;
-    top: 28rem;
-    left: 8.8rem;
-    font-size: 1.1rem;
+    top: min(28rem, 23.3vw);
+    left: min(8.8rem, 7.3vw);
+    font-size: min(1.1rem, 0.9vw);
     letter-spacing: 0.1rem;
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
-
+    gap: min(1.3rem, 1.1vw);
     font-weight: 100;
     font-family: "Ade", serif;
     .link {
       color: rgb(218, 218, 218);
-
       text-decoration: none;
     }
   }
   .imageContainer {
     grid-column: 2 / 3;
-    grid-row: 1/2;
+    grid-row: 2/3;
+
     display: flex;
-    margin-top: -4.2rem;
+    margin-top: min(-4.2rem, -3.5vw);
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -56,73 +59,80 @@
     }
   }
   .subtitles {
-    grid-row: 1/2;
+    grid-row: 2/3;
     grid-column: 3 / 4;
     font-family: "Ade", serif;
-    font-size: 4rem;
-
+    font-size: min(4rem, 3.3vw);
     display: flex;
-    margin-top: 2rem;
+    margin-top: min(2rem, 1.7vw);
     width: 63%;
     flex-direction: column;
     justify-content: center;
     line-height: 1;
     letter-spacing: 0.2rem;
     .subtitle1 {
-      margin-left: 15rem;
+      margin-left: min(15rem, 12.5vw);
     }
     .subtitle2 {
-      margin-left: -5rem;
+      margin-left: min(-5rem, -4.3vw);
     }
     .subtitle3 {
-      margin-left: 2rem;
+      margin-left: min(2rem, 1.7vw);
       letter-spacing: 0.05rem;
     }
   }
   .description {
     grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    font-size: 1.2rem;
-    // width: 38%;
-    width: 13rem;
+    grid-row: 2/3;
+    font-size: min(1.2rem, 1vw);
+    width: min(13rem, 11vw);
     align-self: end;
     font-family: "Montreal-light", sans-serif;
     justify-self: center;
-    margin-bottom: 13.4rem;
-    margin-right: 2rem;
+    margin-bottom: min(13.4rem, 11.2vw);
+    margin-right: min(2rem, 1.7vw);
     letter-spacing: 0.05rem;
     line-height: 1.4;
   }
   .starContainer {
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: 2/3;
     justify-self: end;
-    margin-top: 5.2rem;
-    margin-right: -0.8rem;
+    margin-top: min(5.2rem, 4.3vw);
+    margin-right: min(-0.8rem, -0.7vw);
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
   }
   .bigStarContainer {
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: 2/3;
     align-self: end;
-    margin-bottom: 10rem;
-    margin-left: -3rem;
+    margin-bottom: min(10rem, 8.3vw);
+    margin-left: min(-3rem, -2.5vw);
     z-index: -1;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
   }
   .black,
   .color {
     grid-column: 3/4;
-    grid-row: 1/2;
-    width: 14rem;
-    height: 4.6rem;
+    grid-row: 2/3;
+    width: min(14rem, 11.7vw);
+    height: min(4.6rem, 3.8vw);
     align-self: end;
     justify-self: end;
     color: rgb(218, 218, 218);
-
     background-color: transparent;
     border: 0px;
-    margin-bottom: 1.2rem;
-    font-size: 1rem;
-    border-bottom: 0.2rem solid white;
+    margin-bottom: min(1.2rem, 1vw);
+    font-size: min(1rem, 0.8vw);
+    border-bottom: min(0.2rem, 0.2vw) solid white;
     &:hover {
       cursor: pointer;
     }

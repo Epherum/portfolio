@@ -1,11 +1,11 @@
 .nav {
   display: flex;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  width: 100%;
   z-index: 100;
   justify-content: space-between;
   align-items: center;
-  padding: 3.5rem 4rem;
+  padding: min(3.5rem, 2.9vw) min(4rem, 3.3vw);
   color: rgb(218, 218, 218);
 
   .leftNav {
@@ -13,17 +13,15 @@
     align-items: center;
     .logo {
       color: rgb(218, 218, 218);
-
-      margin-right: 2.5rem;
+      margin-right: min(2.5rem, 2.1vw);
     }
     .request {
       border: none;
       background: none;
       color: rgb(218, 218, 218);
-
-      font-size: 1.2rem;
+      font-size: min(1.2rem, 1vw);
       text-decoration: underline 1px;
-      text-underline-offset: 0.4em; /* Add this line */
+      text-underline-offset: 0.4em;
 
       cursor: pointer;
       &:hover {
@@ -32,18 +30,17 @@
     }
   }
   .wassim {
-    font-size: 2rem;
-    margin-left: 15rem;
+    font-size: min(2rem, 1.7vw);
+    margin-left: min(15rem, 12.5vw);
     font-family: "Ade", serif;
   }
   .rightNav {
     display: flex;
     align-items: center;
     .link {
-      margin-left: 3.2rem;
+      margin-left: min(3.2rem, 2.7vw);
       color: rgb(218, 218, 218);
-
-      font-size: 1.35rem;
+      font-size: min(1.35rem, 1.1vw);
       text-decoration: none;
       cursor: pointer;
       &:hover {
