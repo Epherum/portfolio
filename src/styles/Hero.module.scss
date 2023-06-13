@@ -46,9 +46,9 @@
   .imageContainer {
     grid-column: 2 / 3;
     grid-row: 2/3;
-
     display: flex;
-    margin-top: min(-4.2rem, -3.5vw);
+    // margin-top: min(-4.2rem, -3.5vw);
+    margin-top: min(-2.5rem, -2vw);
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -134,7 +134,6 @@
     font-size: min(1rem, 0.8vw);
     border-bottom: min(0.2rem, 0.2vw) solid white;
     &:hover {
-      cursor: pointer;
     }
   }
   .color {

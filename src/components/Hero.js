@@ -30,12 +30,7 @@ function Hero() {
       </ul>
 
       <div className={styles.imageContainer}>
-        <Image
-          src={ProfilePic}
-          alt="My Image"
-          // width={1000}
-          // height={1000}
-        />
+        <Image src={ProfilePic} alt="My Image" priority />
       </div>
       <div className={styles.subtitles}>
         <p className={styles.subtitle1}>WEB</p>
