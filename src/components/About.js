@@ -1,19 +1,46 @@
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import styles from "@/styles/About.module.scss";
+
 function About() {
   return (
     <section data-scroll-section className={styles.about}>
-      <p className={styles.aboutMe}>ABOUT ME</p>
-      <p className={styles.description}>
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className={styles.aboutMe}
+      >
+        ABOUT ME
+      </motion.p>
+      <motion.p
+        className={styles.description}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         I am passionate about everything that has to do with Digital Design and
         Art Direction, I enjoy working with agencies and enthusiastic people who
         want to solve problems through beautiful designs and experiences,
-      </p>
-      <div className={styles.imageContainer}>
+      </motion.p>
+      <motion.div
+        className={styles.imageContainer}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <Image src="/selfie.png" alt="My Image" width={250} height={250} />
-      </div>
-      <div className={styles.desc1}>
+      </motion.div>
+      <motion.div
+        className={styles.desc1}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <p>Mobile and Web Design</p>
         <p>
           I always strive to create memorable experiences that are aesthetically
@@ -21,8 +48,14 @@ function About() {
           marketing websites, convincing e- commerce sites or apps that are
           truly beneficial to users,
         </p>
-      </div>
-      <div className={styles.desc2}>
+      </motion.div>
+      <motion.div
+        className={styles.desc2}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <p>Mobile and Web Design</p>
         <p>
           I always strive to create memorable experiences that are aesthetically
@@ -30,8 +63,14 @@ function About() {
           marketing websites, convincing e- commerce sites or apps that are
           truly beneficial to users,
         </p>
-      </div>
-      <div className={styles.desc3}>
+      </motion.div>
+      <motion.div
+        className={styles.desc3}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <p>Mobile and Web Design</p>
         <p>
           I always strive to create memorable experiences that are aesthetically
@@ -39,10 +78,17 @@ function About() {
           marketing websites, convincing e- commerce sites or apps that are
           truly beneficial to users,
         </p>
-      </div>
-      <button className={styles.explore}>EXPLORE MY WORK</button>
+      </motion.div>
+      <motion.button
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className={styles.explore}
+      >
+        EXPLORE MY WORK
+      </motion.button>
     </section>
   );
 }
-
 export default About;
