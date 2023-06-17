@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Loader from "@/components/Loader";
 import { SmoothScrollProvider } from "@/SmoothScroll.context";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <Loader />
         <Nav />
         <Hero />
         <About />

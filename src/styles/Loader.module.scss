@@ -1,0 +1,28 @@
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -3;
+
+  .letters {
+    font-weight: 100;
+    font-family: "Ade", serif;
+    font-size: 12rem;
+    letter-spacing: 0.5rem;
+    color: #f27975;
+  }
+}
+
+.counter {
+  position: absolute;
+  top: min(12rem, 12.5vw);
+  right: min(23vw, 22rem);
+  font-size: min(1rem, 1vw);
+  font-family: "Montreal", sans-serif;
+  color: #000000c3;
+}

@@ -22,6 +22,7 @@ body {
   background-color: #111111;
   font-family: "Montreal", serif;
   perspective: 1px;
+  transition: background-color 0.6s;
 }
 
 ul {
@@ -165,6 +166,6 @@ html.has-scroll-dragging {
     rgba(192, 167, 136, 0) 70%,
     #111111 100%
   );
-  transition: 0.2s ease-out;
+  transition: 0.4s cubic-bezier(0.215, 0.41, 0.355, 1);
   z-index: -1;
 }
