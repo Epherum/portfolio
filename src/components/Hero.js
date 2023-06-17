@@ -1,104 +1,82 @@
 import Image from "next/image";
 import styles from "@/styles/Hero.module.scss";
-import ProfilePic from "../../public/selfie2.jpeg";
+import ProfilePic from "../../public/selfie.jpeg";
 import star from "../../public/star.svg";
 import bigStar from "../../public/big-star.svg";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import animations from "@/animations/HeroAnimations";
+import { useEffect } from "react";
 
 function Hero() {
-  const delay = 4.7;
+  const {
+    heyVariant,
+    heyLettersVariant,
+    imVariant,
+    imLettersVariant,
+    wassimVariant,
+    wassimLettersVariant,
+    linksVariant,
+    linkVariant,
+    imageVariant,
+    subtitle1Variant,
+    subtitle2Variant,
+    subtitle3Variant,
+    subtitleLettersVariant,
+    descriptionVariant,
+    buttonVariant,
+    bigCircleVariant,
+  } = animations;
 
-  const imageVariant = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      delay: 2,
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.2 + delay,
-        duration: 0.7,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const titleVariant = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      delay: 2,
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.4 + delay,
-        duration: 0.7,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const subtitleVariant = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      delay: 2,
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.6 + delay,
-        duration: 0.7,
-        ease: "easeOut",
-      },
-    },
-  };
-  const linksVariant = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      delay: 2,
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.7 + delay,
-        duration: 0.7,
-        ease: "easeOut",
-      },
-    },
-  };
-  const descriptionVariant = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      delay: 2,
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.7 + delay,
-        duration: 0.7,
-        ease: "easeOut",
-      },
-    },
-  };
-  const buttonVariant = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      delay: 2,
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.8 + delay,
-        duration: 0.7,
-        ease: "easeOut",
-      },
-    },
-  };
+  const controls = useAnimation();
+  useEffect(() => {
+    const sequence = async () => {
+      await controls.start(bigCircleVariant.visible);
+      await controls.start(bigCircleVariant.spin);
+    };
+    sequence();
+  }, [controls]);
 
   return (
     <section data-scroll-section className={styles.hero}>
-      <motion.h1
-        variants={titleVariant}
-        initial="hidden"
-        animate="visible"
-        className={styles.title}
-      >
-        <span className={styles.hey}>HEY,</span> <br />
-        <span className={styles.im}>I'M</span> WASSIM
+      <motion.h1 className={styles.title}>
+        <motion.p
+          style={{ display: "inline-block", overflow: "hidden" }}
+          variants={heyVariant}
+          initial="hidden"
+          animate="visible"
+          className={styles.hey}
+        >
+          <motion.span variants={heyLettersVariant}>H</motion.span>
+          <motion.span variants={heyLettersVariant}>E</motion.span>
+          <motion.span variants={heyLettersVariant}>Y</motion.span>
+          <motion.span variants={heyLettersVariant}>,</motion.span>
+        </motion.p>
+        <br />
+        <motion.p
+          style={{ display: "inline-block", overflow: "hidden" }}
+          variants={imVariant}
+          initial="hidden"
+          animate="visible"
+          className={styles.im}
+        >
+          <motion.span variants={imLettersVariant}>I</motion.span>
+          <motion.span variants={imLettersVariant}>'</motion.span>
+          <motion.span variants={imLettersVariant}>M</motion.span>
+        </motion.p>
+        <motion.p
+          style={{ display: "inline-block", overflow: "hidden" }}
+          variants={wassimVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.span variants={wassimLettersVariant}>&nbsp; </motion.span>
+          <motion.span variants={wassimLettersVariant}>W</motion.span>
+          <motion.span variants={wassimLettersVariant}>A</motion.span>
+          <motion.span variants={wassimLettersVariant}>S</motion.span>
+          <motion.span variants={wassimLettersVariant}>S</motion.span>
+          <motion.span variants={wassimLettersVariant}>I</motion.span>
+          <motion.span variants={wassimLettersVariant}>M</motion.span>
+        </motion.p>
       </motion.h1>
       <motion.ul
         variants={linksVariant}
@@ -106,21 +84,21 @@ function Hero() {
         animate="visible"
         className={styles.links}
       >
-        <li>
+        <motion.li variants={linkVariant}>
           <a href="#" className={styles.link}>
             LINKEDIN
           </a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={linkVariant}>
           <a href="#" className={styles.link}>
             GITHUB
           </a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={linkVariant}>
           <a href="#" className={styles.link}>
             RESUME{" "}
           </a>
-        </li>
+        </motion.li>
       </motion.ul>
 
       <motion.div
@@ -131,15 +109,53 @@ function Hero() {
       >
         <Image src={ProfilePic} alt="My Image" priority />
       </motion.div>
-      <motion.div
-        variants={subtitleVariant}
-        initial="hidden"
-        animate="visible"
-        className={styles.subtitles}
-      >
-        <p className={styles.subtitle1}>WEB</p>
-        <p className={styles.subtitle2}>EXPERIENCE</p>
-        <p className={styles.subtitle3}>DEVELOPER</p>
+      <motion.div className={styles.subtitles}>
+        <motion.p
+          style={{ display: "inline-block", overflow: "hidden" }}
+          variants={subtitle1Variant}
+          initial="hidden"
+          animate="visible"
+          className={styles.subtitle1}
+        >
+          <motion.span variants={subtitleLettersVariant}>W</motion.span>
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+          <motion.span variants={subtitleLettersVariant}>B</motion.span>
+        </motion.p>
+        <motion.p
+          style={{ display: "inline-block", overflow: "hidden" }}
+          variants={subtitle2Variant}
+          initial="hidden"
+          animate="visible"
+          className={styles.subtitle2}
+        >
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+          <motion.span variants={subtitleLettersVariant}>X</motion.span>
+          <motion.span variants={subtitleLettersVariant}>P</motion.span>
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+          <motion.span variants={subtitleLettersVariant}>R</motion.span>
+          <motion.span variants={subtitleLettersVariant}>I</motion.span>
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+          <motion.span variants={subtitleLettersVariant}>N</motion.span>
+          <motion.span variants={subtitleLettersVariant}>C</motion.span>
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+        </motion.p>
+        <motion.p
+          style={{ display: "inline-block", overflow: "hidden" }}
+          variants={subtitle3Variant}
+          initial="hidden"
+          animate="visible"
+          className={styles.subtitle3}
+        >
+          <motion.span variants={subtitleLettersVariant}>D</motion.span>
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+          <motion.span variants={subtitleLettersVariant}>V</motion.span>
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+          <motion.span variants={subtitleLettersVariant}>L</motion.span>
+          <motion.span variants={subtitleLettersVariant}>O</motion.span>
+          <motion.span variants={subtitleLettersVariant}>P</motion.span>
+          <motion.span variants={subtitleLettersVariant}>E</motion.span>
+          <motion.span variants={subtitleLettersVariant}>R</motion.span>
+        </motion.p>
       </motion.div>
       <motion.p
         variants={descriptionVariant}
@@ -151,17 +167,17 @@ function Hero() {
         solutions.
       </motion.p>
       <motion.div
-        variants={imageVariant}
+        variants={bigCircleVariant}
         initial="hidden"
-        animate="visible"
+        animate={controls}
         className={styles.starContainer}
       >
         <Image src={star} alt="My Image" />
       </motion.div>
       <motion.div
-        variants={imageVariant}
+        variants={bigCircleVariant}
         initial="hidden"
-        animate="visible"
+        animate={controls}
         className={styles.bigStarContainer}
       >
         <Image src={bigStar} alt="My Image" />

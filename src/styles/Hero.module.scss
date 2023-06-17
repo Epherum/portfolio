@@ -9,6 +9,11 @@
   .title {
     grid-column: 1 / 3;
     grid-row: 2/3;
+
+    * {
+      display: inline-block; //this is so that framer motion can animate the y axis
+    }
+
     .hey {
       font-size: min(6.5rem, 5.4vw);
       letter-spacing: 0rem;
@@ -95,13 +100,22 @@
     letter-spacing: 0.2rem;
     .subtitle1 {
       margin-left: min(15rem, 12.5vw);
+      * {
+        display: inline-block;
+      }
     }
     .subtitle2 {
       margin-left: min(-5rem, -4.3vw);
+      * {
+        display: inline-block;
+      }
     }
     .subtitle3 {
-      margin-left: min(2rem, 1.7vw);
+      margin-left: min(-1rem, -0.8vw);
       letter-spacing: 0.05rem;
+      * {
+        display: inline-block;
+      }
     }
   }
   .description {

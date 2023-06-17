@@ -19,10 +19,15 @@
 }
 
 body {
-  background-color: #111111;
+  background-color: #ece4e4;
   font-family: "Montreal", serif;
   perspective: 1px;
   transition: background-color 0.6s;
+}
+
+/* remove scrollbar  */
+::-webkit-scrollbar {
+  display: none;
 }
 
 ul {

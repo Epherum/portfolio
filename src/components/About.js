@@ -32,7 +32,7 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <Image src="/selfie.png" alt="My Image" width={250} height={250} />
+        <Image src="/selfie2.png" alt="My Image" width={250} height={250} />
       </motion.div>
       <motion.div
         className={styles.desc1}

@@ -78,6 +78,7 @@ function Loader() {
 
   useEffect(() => {
     document.body.style.backgroundColor = "#ece4e4";
+
     setTimeout(() => {
       document.body.style.backgroundColor = "#111111";
     }, 4500);

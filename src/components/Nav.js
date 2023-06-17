@@ -3,9 +3,10 @@ import styles from "@/styles/Nav.module.scss";
 import Image from "next/image";
 
 function Nav() {
-  const delay = 4.7;
+  const delay = 4.8;
   const navItems = [
     { text: "home", link: "/" },
+    { text: "projects", link: "/projects" },
     { text: "about", link: "/about" },
     { text: "contact", link: "/contact" },
   ];
