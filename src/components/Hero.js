@@ -40,7 +40,6 @@ function Hero() {
     <section data-scroll-section className={styles.hero}>
       <motion.h1 className={styles.title}>
         <motion.p
-          style={{ display: "inline-block", overflow: "hidden" }}
           variants={heyVariant}
           initial="hidden"
           animate="visible"
@@ -53,7 +52,6 @@ function Hero() {
         </motion.p>
         <br />
         <motion.p
-          style={{ display: "inline-block", overflow: "hidden" }}
           variants={imVariant}
           initial="hidden"
           animate="visible"
@@ -63,12 +61,7 @@ function Hero() {
           <motion.span variants={imLettersVariant}>'</motion.span>
           <motion.span variants={imLettersVariant}>M</motion.span>
         </motion.p>
-        <motion.p
-          style={{ display: "inline-block", overflow: "hidden" }}
-          variants={wassimVariant}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.p variants={wassimVariant} initial="hidden" animate="visible">
           <motion.span variants={wassimLettersVariant}>&nbsp; </motion.span>
           <motion.span variants={wassimLettersVariant}>W</motion.span>
           <motion.span variants={wassimLettersVariant}>A</motion.span>
@@ -111,7 +104,6 @@ function Hero() {
       </motion.div>
       <motion.div className={styles.subtitles}>
         <motion.p
-          style={{ display: "inline-block", overflow: "hidden" }}
           variants={subtitle1Variant}
           initial="hidden"
           animate="visible"
@@ -122,7 +114,6 @@ function Hero() {
           <motion.span variants={subtitleLettersVariant}>B</motion.span>
         </motion.p>
         <motion.p
-          style={{ display: "inline-block", overflow: "hidden" }}
           variants={subtitle2Variant}
           initial="hidden"
           animate="visible"
@@ -140,7 +131,6 @@ function Hero() {
           <motion.span variants={subtitleLettersVariant}>E</motion.span>
         </motion.p>
         <motion.p
-          style={{ display: "inline-block", overflow: "hidden" }}
           variants={subtitle3Variant}
           initial="hidden"
           animate="visible"

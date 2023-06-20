@@ -25,7 +25,7 @@ function About() {
         Art Direction, I enjoy working with agencies and enthusiastic people who
         want to solve problems through beautiful designs and experiences,
       </motion.p>
-      <motion.div
+      {/* <motion.div
         className={styles.imageContainer}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ function About() {
         viewport={{ once: true }}
       >
         <Image src="/selfie2.png" alt="My Image" width={250} height={250} />
-      </motion.div>
+      </motion.div> */}
       <motion.div
         className={styles.desc1}
         initial={{ opacity: 0, y: 30 }}
