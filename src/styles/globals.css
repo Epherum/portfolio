@@ -23,6 +23,8 @@ body {
   font-family: "Montreal", serif;
   perspective: 1px;
   transition: background-color 0.6s;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 /* remove scrollbar  */
@@ -102,7 +104,7 @@ html.has-scroll-dragging {
   border-radius: 50%;
   pointer-events: none;
   transition: width 0.3s, height 0.3s, background-color 0.3s;
-  z-index: 999;
+  z-index: -1;
 }
 
 .innerCursor.is-hovering {
@@ -110,45 +112,7 @@ html.has-scroll-dragging {
   height: 25px;
   transition: width 0.3s, height 0.3s;
 }
-.innerCursor.is-video {
-  width: 200px !important;
-  height: 200px;
-  background-color: rgb(229, 229, 229);
-  transition: width 0.3s, height 0.3s, background-color 0.3s;
-  z-index: 999 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  mix-blend-mode: normal;
-  font-family: "Ade", serif;
-}
 
-/* .gold-gradient-circle {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 45%;
-  height: 0;
-  padding-bottom: 45%;
-  transform: translate(-50%, -50%);
-  border: 0.00001rem solid #6565655d;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(192, 167, 136, 0.2) 0%,
-    rgba(192, 167, 136, 0.17) 10%,
-    rgba(192, 167, 136, 0.14) 20%,
-    rgba(192, 167, 136, 0.11) 30%,
-    rgba(192, 167, 136, 0.08) 40%,
-    rgba(192, 167, 136, 0.05) 50%,
-    rgba(192, 167, 136, 0.02) 60%,
-    rgba(192, 167, 136, 0) 70%,
-    #111111 100%
-  );
-  transition: 0.2s;
-  z-index: -1;
-} */
 .gold-gradient-circle {
   position: fixed;
   top: 50%;
@@ -157,7 +121,7 @@ html.has-scroll-dragging {
   height: 0;
   padding-bottom: 48%;
   transform: translate(-50%, -50%);
-  border: 0.00001rem solid #6565655d;
+  border: 1px solid #6565655d;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -172,5 +136,5 @@ html.has-scroll-dragging {
     #111111 100%
   );
   transition: 0.4s cubic-bezier(0.215, 0.41, 0.355, 1);
-  z-index: 99;
+  z-index: -1;
 }

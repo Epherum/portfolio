@@ -36,7 +36,7 @@
     position: absolute;
     top: min(28rem, 23.3vw);
     left: min(8.8rem, 7.3vw);
-    font-size: min(1.1rem, 0.9vw);
+    font-size: min(1.2rem, 1vw);
     letter-spacing: 0.1rem;
     display: flex;
     flex-direction: column;
@@ -71,21 +71,6 @@
     border-radius: 50%;
   }
 
-  // .imageContainer {
-  //   grid-column: 2 / 3;
-  //   grid-row: 2/3;
-  //   display: flex;
-  //   // margin-top: min(-4.2rem, -3.5vw);
-  //   margin-top: min(-2.5rem, -2vw);
-  //   justify-content: center;
-  //   align-items: center;
-  //   height: 100%;
-  //   img {
-  //     max-width: 100%;
-  //     max-height: 100%;
-  //     object-fit: contain;
-  //   }
-  // }
   .subtitles {
     grid-row: 2/3;
     grid-column: 3 / 4;

@@ -38,17 +38,6 @@ export default function App({ Component, pageProps }) {
         innerCursorRef.current.classList.remove("is-hovering");
       });
     });
-    const videoElements = document.querySelectorAll(".swiper-slide");
-    videoElements.forEach((video) => {
-      video.addEventListener("mouseover", () => {
-        innerCursorRef.current.classList.add("is-video");
-        innerCursorRef.current.textContent = "MISSGUIDED";
-      });
-      video.addEventListener("mouseout", () => {
-        innerCursorRef.current.classList.remove("is-video");
-        innerCursorRef.current.textContent = "";
-      });
-    });
 
     document.addEventListener("mousemove", handleMouseMove);
 

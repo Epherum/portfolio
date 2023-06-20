@@ -38,7 +38,12 @@ function Hero() {
 
   return (
     <section data-scroll-section className={styles.hero}>
-      <motion.h1 className={styles.title}>
+      <motion.h1
+        className={styles.title}
+        // data-scroll
+        // data-scroll-direction="vertical"
+        // data-scroll-speed="-1"
+      >
         <motion.p
           variants={heyVariant}
           initial="hidden"
@@ -78,12 +83,15 @@ function Hero() {
         className={styles.links}
       >
         <motion.li variants={linkVariant}>
-          <a href="#" className={styles.link}>
+          <a
+            href="https://www.linkedin.com/in/wassimfekih/"
+            className={styles.link}
+          >
             LINKEDIN
           </a>
         </motion.li>
         <motion.li variants={linkVariant}>
-          <a href="#" className={styles.link}>
+          <a href="https://github.com/Epherum" className={styles.link}>
             GITHUB
           </a>
         </motion.li>
@@ -102,7 +110,12 @@ function Hero() {
       >
         <Image src={ProfilePic} alt="My Image" priority />
       </motion.div>
-      <motion.div className={styles.subtitles}>
+      <motion.div
+        // data-scroll
+        // data-scroll-direction="vertical"
+        // data-scroll-speed="-1"
+        className={styles.subtitles}
+      >
         <motion.p
           variants={subtitle1Variant}
           initial="hidden"

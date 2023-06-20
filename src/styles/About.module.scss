@@ -72,5 +72,10 @@
     margin-bottom: min(3.5rem, 2.9vw);
     margin-right: min(4rem, 3.3vw);
     font-size: min(1rem, 0.8vw);
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    &:hover {
+      background-color: white;
+      color: #111111;
+    }
   }
 }
