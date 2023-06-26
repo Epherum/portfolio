@@ -8,19 +8,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    display: flex; /* Add this line */
-    justify-content: center; /* Add this line */
-    align-items: center; /* Add this line */
-    flex-direction: column; /* Add this line */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .headline {
       font-family: "Ade", serif;
-      margin-top: min(2rem, 1.7vw);
-      font-size: min(6rem, 5vw);
-      line-height: min(8.3rem, 7vw);
-      letter-spacing: min(0.3rem, 0.2vw);
+      margin-top: 0.2em;
+      font-size: 5em;
+      line-height: 1.4em;
+      letter-spacing: 0.04em;
       font-weight: 100;
       text-transform: uppercase;
-      margin-bottom: min(8rem, 7vw);
+      margin-bottom: 0.8em;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,8 +31,8 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: min(1.3rem, 1vw);
-      margin-bottom: min(0.5rem, 0.4vw);
+      font-size: 1em;
+      margin-bottom: 0.5em;
     }
     .email {
       font-size: min(2.1rem, 1.7vw);
@@ -46,6 +46,10 @@
     left: min(3rem, 2.6vw);
     bottom: min(3rem, 2.6vw);
     font-size: min(1.3rem, 1vw);
+    //first p
+    & > p:first-child {
+      margin-bottom: min(0.5rem, 0.6vw);
+    }
   }
   .right {
     position: absolute;
@@ -53,6 +57,9 @@
     bottom: min(3rem, 2.6vw);
     font-size: min(1.3rem, 1vw);
     text-align: right;
+    & > p:first-child {
+      margin-bottom: min(0.5rem, 0.6vw);
+    }
   }
   .buttons {
     position: absolute;
@@ -73,8 +80,11 @@
       font-size: min(1rem, 0.8vw);
       color: rgb(218, 218, 218);
       text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
       &:hover {
-        color: rgb(218, 218, 218);
+        background-color: rgb(218, 218, 218);
+        color: #111111;
       }
     }
   }

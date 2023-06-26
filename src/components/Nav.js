@@ -1,14 +1,38 @@
 import { motion } from "framer-motion";
 import styles from "@/styles/Nav.module.scss";
 import Image from "next/image";
+import { SmoothScrollContext } from "@/SmoothScroll.context";
+import { useContext } from "react";
 
 function Nav() {
+  const { scroll } = useContext(SmoothScrollContext);
+
+  const goToAbout = (event) => {
+    event.preventDefault();
+    scroll && scroll.scrollTo("#about-section");
+  };
+
+  const goToProjects = (event) => {
+    event.preventDefault();
+    scroll && scroll.scrollTo("#projects-section");
+  };
+
+  const goToContact = (event) => {
+    event.preventDefault();
+    scroll && scroll.scrollTo("#contact-section");
+  };
+
+  const goToTop = (event) => {
+    event.preventDefault();
+    scroll && scroll.scrollTo(0);
+  };
+
   const delay = 4.8;
   const navItems = [
-    { text: "home", link: "/" },
-    { text: "projects", link: "/projects" },
-    { text: "about", link: "/about" },
-    { text: "contact", link: "/contact" },
+    { text: "home" },
+    { text: "projects" },
+    { text: "about" },
+    { text: "contact" },
   ];
 
   const navVariants = {
@@ -46,7 +70,7 @@ function Nav() {
           initial="hidden"
           animate="visible"
         >
-          <a href="/" className={styles.logo}>
+          <a onClick={goToTop} href="/" className={styles.logo}>
             <Image src="/logo.svg" alt="My Image" width={31} height={31} />
           </a>
         </motion.li>
@@ -55,7 +79,9 @@ function Nav() {
           initial="hidden"
           animate="visible"
         >
-          <button className={styles.request}>send a request</button>
+          <button onClick={goToContact} className={styles.request}>
+            send a request
+          </button>
         </motion.li>
       </ul>
       <motion.p
@@ -75,7 +101,21 @@ function Nav() {
             animate="visible"
             transition={{ delay: index * 0.1, ease: "easeOut", duration: 0.5 }}
           >
-            <a href={item.link} className={styles.link}>
+            <a
+              onClick={
+                item.text === "home"
+                  ? goToTop
+                  : item.text === "about"
+                  ? goToAbout
+                  : item.text === "projects"
+                  ? goToProjects
+                  : item.text === "contact"
+                  ? goToContact
+                  : null
+              }
+              href="#"
+              className={styles.link}
+            >
               {item.text}
             </a>
           </motion.li>

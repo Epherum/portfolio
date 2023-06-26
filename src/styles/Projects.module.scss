@@ -2,39 +2,42 @@
   position: relative;
   width: 100%;
   color: rgb(218, 218, 218);
-
   .projectOne {
     display: flex;
     justify-content: center;
     height: max(100vh, 850px);
     width: 100%;
     position: sticky;
+    background-color: #111111;
     background-color: transparent;
-    z-index: -2;
+
+    z-index: -100;
   }
   .projectThree {
     display: flex;
     justify-content: center;
-    position: sticky;
-    height: max(calc(100vh - 7rem), calc(850px - 7rem));
+    // position: sticky;
+    height: max(calc(100vh - 7em), calc(850px - 7em));
+
     width: 100%;
-    z-index: 3;
+    background-color: #111111;
+    background-color: transparent;
+
+    z-index: -50;
   }
   .container1 {
     border-top: 1px solid white;
-    padding: 2rem 0 0 0;
-    margin: 7rem 3rem 6rem 3rem;
+    padding: 2em 0 0 0;
+    margin: 7em 3em 6em 3em;
     display: grid;
     grid-template-columns: 2fr 4.2fr;
   }
   .container2 {
     border-top: 1px solid white;
-    padding: 2rem 0 0 0;
-    margin: 0rem 3rem 6rem 3rem;
+    padding: 2em 0 0 0;
+    margin: 0em 3em 6em 3em;
     display: grid;
     grid-template-columns: 2fr 4.2fr;
-    background-color: #111111;
-    z-index: -33;
   }
   .subtitle {
     grid-column: 2/3;
@@ -42,7 +45,7 @@
   .title {
     grid-column: 1/2;
     grid-row: 1/2;
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   .video {
@@ -66,11 +69,11 @@
       color: rgb(218, 218, 218);
       text-decoration: none;
       border: 1px solid rgb(218, 218, 218);
-      padding: 0.5rem 1rem;
-      width: min(11rem, 8.8vw);
-      height: min(3.5rem, 2.9vw);
-      border-radius: min(3rem, 2.5vw);
-      font-size: min(1.1rem, 0.9vw);
+      padding: 0.5em 1em;
+      width: 10em;
+      height: 3.5em;
+      border-radius: 3em;
+      font-size: 0.9em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,15 +86,15 @@
     }
     .links {
       display: flex;
-      gap: 2rem;
+      gap: 2em;
       grid-column: 1/2;
     }
     .description {
       grid-column: 1/2;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      width: 23rem;
-      margin-top: 2rem;
+      font-size: 1em;
+      line-height: 1.5em;
+      width: 23em;
+      margin-top: 2em;
     }
   }
 }

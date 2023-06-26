@@ -68,7 +68,7 @@ export default function Home() {
 
 const Marqueee = () => {
   return (
-    <div data-scroll-section className={styles.marquee}>
+    <div data-scroll-section className={styles.marquee} id="about-section">
       <Marquee speed={100}>
         <div className={styles.marquee__inner}>
           <span>

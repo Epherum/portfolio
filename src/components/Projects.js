@@ -3,12 +3,16 @@ import styles from "@/styles/Projects.module.scss";
 
 function Projects() {
   return (
-    <section data-scroll-section id="section-1" className={styles.projects}>
+    <section
+      data-scroll-section
+      id="projects-section"
+      className={styles.projects}
+    >
       <div
         className={styles.projectOne}
-        data-scroll-sticky
-        data-scroll
-        data-scroll-target="#section-1"
+        // data-scroll-sticky
+        // data-scroll
+        data-scroll-target="projects-section"
       >
         <div className={styles.container1}>
           <h2 className={styles.subtitle}>

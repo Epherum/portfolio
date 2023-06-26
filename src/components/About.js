@@ -1,8 +1,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "@/styles/About.module.scss";
+import { SmoothScrollContext } from "@/SmoothScroll.context";
+import { useContext } from "react";
 
 function About() {
+  const { scroll } = useContext(SmoothScrollContext);
+
+  const goToProjects = (event) => {
+    event.preventDefault();
+    scroll && scroll.scrollTo("#projects-section");
+  };
   return (
     <section data-scroll-section className={styles.about}>
       <motion.p
@@ -85,6 +93,7 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         className={styles.explore}
+        onClick={goToProjects}
       >
         EXPLORE MY WORK
       </motion.button>

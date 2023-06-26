@@ -9,7 +9,9 @@ export const SmoothScrollProvider = ({ children, options }) => {
 
   useEffect(() => {
     if (!scroll) {
-      (async () => {
+      const delay = 5000; // 5 seconds delay
+
+      const timer = setTimeout(async () => {
         try {
           const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
@@ -23,7 +25,9 @@ export const SmoothScrollProvider = ({ children, options }) => {
         } catch (error) {
           throw Error(`[SmoothScrollProvider]: ${error}`);
         }
-      })();
+      }, delay);
+
+      return () => clearTimeout(timer);
     }
 
     return () => {

@@ -1,167 +1,155 @@
 .hero {
-  display: grid;
-  grid-template-columns: 34.5% 32.5% auto;
-  grid-template-rows: 14% auto;
   position: relative;
-  color: rgb(218, 218, 218);
+  z-index: 2;
+  display: flex;
+  width: 100vw;
   height: 100vh;
-
-  .title {
-    grid-column: 1 / 3;
-    grid-row: 2/3;
-
-    * {
-      display: inline-block; //this is so that framer motion can animate the y axis
+  padding: 10em 4em 7em;
+  justify-content: space-between;
+  color: rgb(218, 218, 218);
+  .mainLeft {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    width: 17.7em;
+    padding-bottom: 6em;
+    flex-direction: column;
+    justify-content: center;
+    grid-column-gap: 4em;
+    grid-row-gap: 4em;
+    .title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      // margin-left: -20px;
+      font-family: "Ade", sans-serif;
+      font-size: 5.4em;
+      line-height: 1;
+      font-weight: 400;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      grid-column-gap: 1em;
+      grid-row-gap: 1em;
+      margin-left: 45px;
+      a {
+        transition: opacity 200ms ease;
+        color: rgb(218, 218, 218);
+        font-family: "Ade", sans-serif;
 
-    .hey {
-      font-size: min(6.5rem, 5.4vw);
-      letter-spacing: 0rem;
+        text-decoration: none;
+        max-width: 100%;
+        display: inline-block;
+      }
     }
-    .im {
-      letter-spacing: min(-0.3rem, -0.3vw);
-    }
-    position: absolute;
-    top: min(9rem, 7.5vw);
-    left: min(5rem, 4.2vw);
-    font-size: min(6.3rem, 5.2vw);
-    line-height: 1;
-    letter-spacing: 0.3rem;
-    font-family: "Ade", serif;
-    font-weight: 100;
   }
-  .links {
-    grid-column: 1 / 2;
-    grid-row: 2/3;
-    position: absolute;
-    top: min(28rem, 23.3vw);
-    left: min(8.8rem, 7.3vw);
-    font-size: min(1.2rem, 1vw);
-    letter-spacing: 0.1rem;
+  .images {
     display: flex;
     flex-direction: column;
-    gap: min(1.3rem, 1.1vw);
-    font-weight: 100;
-    font-family: "Ade", serif;
-    .link {
-      color: rgb(218, 218, 218);
-      text-decoration: none;
-    }
-  }
-  .imageContainer {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    display: flex;
-    margin-top: min(5rem, 4.2vw);
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    border-radius: 50%;
-    width: min(38rem, 31vw);
-    height: min(38rem, 31vw);
-    z-index: -1;
+    .selfie {
+      position: relative;
+      z-index: 3;
+      width: 32em;
+      height: 32em;
+      border-radius: 50%;
+      overflow: hidden;
+      //flip
+      img {
+        transform: scaleX(-1);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .bigStar {
+      position: absolute;
+      width: 15em;
+      margin-top: 24em;
+      margin-right: 21em;
+      max-width: 100%;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .smallStar {
+      position: absolute;
+      width: 3em;
+      margin-bottom: 32em;
+      margin-left: 24em;
+      max-width: 100%;
+      vertical-align: middle;
+      display: inline-block;
+    }
   }
-
-  .imageContainer img {
-    transform: scaleX(-1);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-  }
-
-  .subtitles {
-    grid-row: 2/3;
-    grid-column: 3 / 4;
-    font-family: "Ade", serif;
-    font-size: min(4rem, 3.3vw);
+  .mainRight {
+    position: relative;
+    z-index: 9;
     display: flex;
-    margin-top: min(2rem, 1.7vw);
+    width: 17.7em;
+    padding-top: 14em;
     flex-direction: column;
     justify-content: center;
-    line-height: 1;
-    letter-spacing: 0.2rem;
-    .subtitle1 {
-      margin-left: min(15rem, 12.5vw);
-      * {
-        display: inline-block;
-      }
-    }
-    .subtitle2 {
-      margin-left: min(-5rem, -4.3vw);
-      * {
-        display: inline-block;
-      }
-    }
-    .subtitle3 {
-      margin-left: min(-1rem, -0.8vw);
-      letter-spacing: 0.05rem;
-      * {
-        display: inline-block;
-      }
-    }
-  }
-  .description {
-    grid-column: 3 / 4;
-    grid-row: 2/3;
-    font-size: min(1.2rem, 1vw);
-    width: min(13rem, 11vw);
-    align-self: end;
-    font-family: "Montreal-light", sans-serif;
-    justify-self: center;
-    margin-bottom: min(13.4rem, 11.2vw);
-    margin-right: min(2rem, 1.7vw);
-    letter-spacing: 0.05rem;
-    line-height: 1.4;
-  }
-  .starContainer {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: end;
-    margin-top: min(5.2rem, 4.3vw);
-    margin-right: min(-0.8rem, -0.7vw);
-    width: min(3.3rem, 2.7vw);
-    height: min(3.3rem, 2.7vw);
-    img {
+    align-items: flex-end;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    .hero_h2 {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-family: "Ade", sans-serif;
+      font-size: 3.5em;
+      line-height: 1;
+      font-weight: 400;
+      text-transform: uppercase;
+      @media screen and (min-width: 1440px) {
+        .hero_h2_1 {
+          padding-left: 0.1em;
+        }
+      }
+      .hero_h2_2 {
+        position: relative;
+        left: -4.75em;
+      }
+      .hero_h2_3 {
+        position: relative;
+        left: -3.2em;
+      }
     }
-  }
-  .bigStarContainer {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    align-self: end;
-    margin-bottom: min(10rem, 8.3vw);
-    margin-left: min(-3rem, -2.5vw);
-    width: min(19rem, 15.8vw);
-    height: min(19rem, 15.8vw);
-    z-index: -2;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    .description {
+      margin-right: 140px;
+      font-size: 1em;
+      line-height: 1.5em;
+      font-family: "Montreal-light";
+      width: 13em;
     }
   }
   .black,
   .color {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    width: min(14rem, 11.7vw);
-    height: min(4.6rem, 3.8vw);
-    align-self: end;
-    justify-self: end;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 14.5em;
+    height: 4.5em;
+    font-size: 0.8em;
     color: rgb(218, 218, 218);
     background-color: transparent;
-    border: 0px;
-    margin-bottom: min(1.2rem, 1vw);
-    font-size: min(1rem, 0.8vw);
-    border-bottom: min(0.2rem, 0.2vw) solid white;
+    border: 0;
+    border-bottom: 3px solid rgb(218, 218, 218);
   }
   .color {
-    grid-column: 1/2;
-    justify-self: start;
     border-bottom: 0;
+    left: 0;
   }
+}
+
+.tricksword {
+  white-space: nowrap;
+  display: inline-block;
+}
+.letter {
+  display: inline-block;
 }
