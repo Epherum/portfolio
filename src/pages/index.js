@@ -9,6 +9,7 @@ import Loader from "@/components/Loader";
 import { SmoothScrollProvider } from "@/SmoothScroll.context";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
+import { useColor, ColorProvider } from "@/Color.context";
 
 const FeaturedProjectsVariant1 = {
   hidden: {},
@@ -46,13 +47,29 @@ const FeaturedProjectsLettersVariant = {
 export default function Home() {
   return (
     <SmoothScrollProvider options={{ smooth: true }}>
+      <ColorProvider>
+        <HomeContent />
+      </ColorProvider>
+    </SmoothScrollProvider>
+  );
+}
+
+function HomeContent() {
+  const { black } = useColor();
+
+  return (
+    <>
       <Head>
         <title>Wassim Fekih</title>
         <meta name="description" content="Wassim Fekih web portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main
+        className={`${styles.main}
+          
+        `}
+      >
         <Loader />
         <Nav />
         <Hero />
@@ -62,7 +79,7 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
-    </SmoothScrollProvider>
+    </>
   );
 }
 
@@ -72,11 +89,10 @@ const Marqueee = () => {
       <Marquee speed={100}>
         <div className={styles.marquee__inner}>
           <span>
-            DESIGNER &nbsp; • &nbsp; CONTENT CREATOR &nbsp; • &nbsp; UX
-            RESEARCHER &nbsp; • &nbsp; UX DESIGNER &nbsp; • &nbsp; CONTENT
-            CREATOR &nbsp; • &nbsp; UX RESEARCHER &nbsp; • &nbsp; UX DESIGNER
-            &nbsp; • &nbsp; CONTENT CREATOR &nbsp; • &nbsp; UX RESEARCHER &nbsp;
-            • &nbsp;
+            WEB DEVELOPER &nbsp; • &nbsp; FRONT-END ENGINEER &nbsp; • &nbsp;
+            FULL STACK DEVELOPER &nbsp; • &nbsp; PROBLEM SOLVER &nbsp; • &nbsp;
+            TECH ENTHUSIAST &nbsp; • &nbsp; INNOVATOR &nbsp; • &nbsp; PASSIONATE
+            LEARNER &nbsp; • &nbsp;
           </span>
         </div>
       </Marquee>

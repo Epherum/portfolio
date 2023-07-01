@@ -32,11 +32,11 @@ function Projects() {
               </a>
             </div>
             <p className={styles.description}>
-              What started as a simple app that matched students with companies,
-              quickly grew to become a leading digital recruitment tool- Appart
-              helped design and launch the brand and has been their go-to
-              product and design partner since launch.e brand and has been their
-              go-to product and design partner since launch.
+              With captivating animations, I built an e-commerce website that
+              keeps users engaged. Bold transitions, interactive showcases, and
+              smooth scrolling create a visually appealing and intuitive
+              experience. These animations guide attention, enhance navigation,
+              and leave a lasting impression. Built with React, Firebase
             </p>
           </div>
         </div>
@@ -60,11 +60,11 @@ function Projects() {
               </a>
             </div>
             <p className={styles.description}>
-              What started as a simple app that matched students with companies,
-              quickly grew to become a leading digital recruitment tool- Appart
-              helped design and launch the brand and has been their go-to
-              product and design partner since launch.e brand and has been their
-              go-to product and design partner since launch.
+              Designed with cleanliness and subtle animations, this bug tracker
+              provides an enjoyable experience. The intuitive interface allows
+              users to navigate effortlessly and manage bug reports effectively.
+              Thoughtful animations enhance the overall usability, making the
+              bug tracker a joy to use. Built with Nextjs, Firebase
             </p>
           </div>
         </div>

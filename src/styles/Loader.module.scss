@@ -22,7 +22,7 @@
 
 .counter {
   position: absolute;
-  top: 300px;
+  top: 200px;
   right: 350px;
   font-size: 1.1em;
   font-family: "Montreal", sans-serif;
@@ -30,13 +30,21 @@
   @media screen and (max-width: 991px) {
     right: 250px;
     font-size: 2em;
+    top: 250px;
   }
   @media screen and (max-width: 767px) {
     right: 150px;
     font-size: 1.7em;
+    top: 350px;
   }
   @media screen and (max-width: 575px) {
     right: 50px;
     font-size: 1.5em;
+    top: 300px;
+  }
+  @media screen and (max-width: 400px) {
+    right: 50px;
+    font-size: 1.5em;
+    top: 350px;
   }
 }

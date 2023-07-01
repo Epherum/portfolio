@@ -53,7 +53,7 @@ const containerVariants = {
   },
   hide: {
     rotate: 25,
-    y: 500,
+    y: 700,
     transition: {
       delay: 0.7,
       duration: 0.6,

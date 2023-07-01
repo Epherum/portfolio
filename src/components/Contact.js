@@ -27,7 +27,7 @@ function Contact() {
         </a>
       </div>
       <div className={styles.left}>
-        <p>Design by Wassim Fekih</p>
+        <p>Made with 🤍🤍</p>
         <p>Developed by Wassim Fekih</p>
       </div>
       <div className={styles.right}>

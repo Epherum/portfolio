@@ -39,6 +39,18 @@ export default function App({ Component, pageProps }) {
       });
     });
 
+    //do the same for buttons
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.addEventListener("mouseover", () => {
+        innerCursorRef.current.classList.add("is-hovering");
+      });
+
+      button.addEventListener("mouseout", () => {
+        innerCursorRef.current.classList.remove("is-hovering");
+      });
+    });
+
     document.addEventListener("mousemove", handleMouseMove);
 
     return () => {

@@ -31,9 +31,10 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        I am passionate about everything that has to do with Digital Design and
-        Art Direction, I enjoy working with agencies and enthusiastic people who
-        want to solve problems through beautiful designs and experiences,
+        I am passionate about everything related to software development and
+        building innovative solutions. I enjoy collaborating with teams and
+        individuals who are driven to solve complex problems through clean and
+        efficient code.
       </motion.p>
       {/* <motion.div
         className={styles.imageContainer}
@@ -51,12 +52,12 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2>Mobile and Web Design</h2>
+        <h2>Full Stack Development</h2>
         <p>
-          I always strive to create memorable experiences that are aesthetically
-          appealing. functional and distinctive. Whether it's inspiring
-          marketing websites, convincing e- commerce sites or apps that are
-          truly beneficial to users,
+          I strive to create memorable experiences that are aesthetically
+          appealing, functional, and user-centric. Whether it's crafting
+          inspiring websites or developing impactful web applications, I am
+          committed to delivering solutions that enhance the user's journey.
         </p>
       </motion.div>
       <motion.div
@@ -66,12 +67,12 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2>Mobile and Web Design</h2>
+        <h2>Technology Stack</h2>
         <p>
-          I always strive to create memorable experiences that are aesthetically
-          appealing. functional and distinctive. Whether it's inspiring
-          marketing websites, convincing e- commerce sites or apps that are
-          truly beneficial to users,
+          With a dynamic technology stack, I create powerful and user-centric
+          solutions. Utilizing React, Next.js, MongoDB, SQL, and more. From
+          crafting inspiring websites to building impactful experiences, I am
+          dedicated to delivering solutions that elevate the user's journey.
         </p>
       </motion.div>
       <motion.div
@@ -81,12 +82,12 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2>Mobile and Web Design</h2>
+        <h2>Continuous Learning</h2>
         <p>
-          I always strive to create memorable experiences that are aesthetically
-          appealing. functional and distinctive. Whether it's inspiring
-          marketing websites, convincing e- commerce sites or apps that are
-          truly beneficial to users,
+          I am committed to continuous learning, always staying updated with the
+          latest industry trends. By actively seeking out opportunities to
+          expand my knowledge and skills, I ensure that I deliver innovative
+          solutions.
         </p>
       </motion.div>
       <motion.button
