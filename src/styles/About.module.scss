@@ -4,13 +4,28 @@
   grid-template-rows: 50% 50%;
   color: rgb(218, 218, 218);
   margin-bottom: min(12rem, 10vw);
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 0 3em;
+  }
+
   .aboutMe {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-top: min(6rem, 5vw);
     margin-left: min(4rem, 3.3vw);
     font-size: min(1rem, 0.8vw);
+
+    @media screen and (max-width: 500px) {
+      font-size: calc(min(1rem, 0.8vw) + 0.7em);
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
+
   .description {
     grid-column: 2/4;
     grid-row: 1/2;
@@ -19,19 +34,32 @@
     font-size: min(2.2rem, 1.8vw);
     word-spacing: min(0.3rem, 0.25vw);
     width: 84%;
+
+    @media screen and (max-width: 768px) {
+      font-size: 3.5em;
+      width: 60%;
+      margin-bottom: 3em;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: calc(min(2.2rem, 1.8vw) + 3em);
+      width: 80%;
+    }
   }
+
   .imageContainer {
     grid-column: 4/5;
     grid-row: 1/2;
     margin-top: min(4rem, 3vw);
     align-self: center;
     justify-self: center;
+
     img {
       width: min(13rem, 12.8vw);
       height: min(13rem, 12.8vw);
       transform: scaleX(-1);
     }
   }
+
   .desc1,
   .desc2,
   .desc3 {
@@ -42,24 +70,60 @@
     font-size: min(1rem, 0.8vw);
     word-spacing: min(0.3rem, 0.25vw);
     width: 65%;
-    //first p tag
-    p:nth-child(1) {
+
+    h2 {
       font-size: min(1.4rem, 1.2vw);
       margin-bottom: min(2rem, 1.7vw);
     }
+
+    @media screen and (max-width: 500px) {
+      font-size: calc(min(1rem, 0.8vw) + 0.8em);
+    }
+
+    @media screen and (max-width: 768px) {
+      border-top: 1px solid white;
+      padding-top: min(4rem, 3.3vw);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-left: 0;
+
+      h2 {
+        font-size: 3em;
+        width: 30%;
+      }
+
+      p {
+        width: 40%;
+        font-size: 2.3em;
+      }
+    }
   }
+
   .desc2 {
     grid-column: 2/3;
     margin-left: min(1rem, 0.8vw);
     width: 80%;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+      width: 100%;
+    }
   }
+
   .desc3 {
     grid-column: 3/4;
     margin-left: min(1rem, 0.8vw);
     width: 80%;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+      width: 100%;
+    }
   }
+
   .explore {
-    width: min(13rem, 10.8vw);
+    width: min(14rem, 11.8vw);
     height: min(3.5rem, 2.9vw);
     border-radius: min(3rem, 2.5vw);
     background-color: transparent;
@@ -73,9 +137,24 @@
     margin-right: min(4rem, 3.3vw);
     font-size: min(1rem, 0.8vw);
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
     &:hover {
       background-color: white;
       color: #111111;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 6em;
+      width: 100%;
+      font-size: 1.8em;
+      height: 3em;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: calc(min(1rem, 0.8vw) + 1.3em);
     }
   }
 }

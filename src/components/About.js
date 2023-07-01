@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import styles from "@/styles/About.module.scss";
 import { SmoothScrollContext } from "@/SmoothScroll.context";
 import { useContext } from "react";
+//import down arrow from react icons
+import { FaArrowDown } from "react-icons/fa";
 
 function About() {
   const { scroll } = useContext(SmoothScrollContext);
@@ -49,7 +51,7 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <p>Mobile and Web Design</p>
+        <h2>Mobile and Web Design</h2>
         <p>
           I always strive to create memorable experiences that are aesthetically
           appealing. functional and distinctive. Whether it's inspiring
@@ -64,7 +66,7 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <p>Mobile and Web Design</p>
+        <h2>Mobile and Web Design</h2>
         <p>
           I always strive to create memorable experiences that are aesthetically
           appealing. functional and distinctive. Whether it's inspiring
@@ -79,7 +81,7 @@ function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <p>Mobile and Web Design</p>
+        <h2>Mobile and Web Design</h2>
         <p>
           I always strive to create memorable experiences that are aesthetically
           appealing. functional and distinctive. Whether it's inspiring
@@ -95,7 +97,7 @@ function About() {
         className={styles.explore}
         onClick={goToProjects}
       >
-        EXPLORE MY WORK
+        EXPLORE MY WORK <FaArrowDown />
       </motion.button>
     </section>
   );

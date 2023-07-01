@@ -3,6 +3,7 @@ import styles from "@/styles/Nav.module.scss";
 import Image from "next/image";
 import { SmoothScrollContext } from "@/SmoothScroll.context";
 import { useContext } from "react";
+import { FaArrowDown } from "react-icons/fa";
 
 function Nav() {
   const { scroll } = useContext(SmoothScrollContext);
@@ -113,14 +114,17 @@ function Nav() {
                   ? goToContact
                   : null
               }
-              href="#"
               className={styles.link}
+              id={item.text}
             >
               {item.text}
             </a>
           </motion.li>
         ))}
       </ul>
+      <a className={styles.projectsMobile} onClick={goToProjects}>
+        projects <FaArrowDown />
+      </a>
     </nav>
   );
 }

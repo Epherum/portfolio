@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "@/styles/Loader.module.scss";
 import { motion, useAnimation } from "framer-motion";
 
@@ -65,6 +65,8 @@ const containerVariants = {
 function Loader() {
   const animationControls = useAnimation();
 
+  const loaderRef = useRef(null);
+
   useEffect(() => {
     const animate = async () => {
       await animationControls.start("visible");
@@ -81,11 +83,12 @@ function Loader() {
 
     setTimeout(() => {
       document.body.style.backgroundColor = "#111111";
+      loaderRef.current.style.opacity = 0;
     }, 4500);
   }, []);
 
   return (
-    <div className={styles.loader}>
+    <div className={styles.loader} id="loader" ref={loaderRef}>
       <div
         style={{
           overflow: "hidden",

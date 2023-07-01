@@ -19,6 +19,9 @@ function Projects() {
             Redesign of the popular e-commerce shop MISSGUIDED
           </h2>
           <h2 className={styles.title}>MISSGUIDED</h2>
+          <div className={styles.video}>
+            <video src="/missguided.mp4" alt="missguided" autoPlay loop muted />
+          </div>
           <div className={styles.projectdesc}>
             <div className={styles.links}>
               <a href="https://wassim-missguided.web.app/" target="_blank">
@@ -36,9 +39,6 @@ function Projects() {
               go-to product and design partner since launch.
             </p>
           </div>
-          <div className={styles.video}>
-            <video src="/missguided.mp4" alt="missguided" autoPlay loop muted />
-          </div>
         </div>
       </div>
       <div className={styles.projectThree} data-scroll-sticky data-scroll>
@@ -47,6 +47,9 @@ function Projects() {
             Interactive issue tracking application
           </h2>
           <h2 className={styles.title}>ZAPPER</h2>
+          <div className={styles.video}>
+            <video src="/zapper.mp4" alt="zapper" autoPlay loop muted />
+          </div>
           <div className={styles.projectdesc}>
             <div className={styles.links}>
               <a href="https://zapperr.vercel.app/" target="_blank">
@@ -63,9 +66,6 @@ function Projects() {
               product and design partner since launch.e brand and has been their
               go-to product and design partner since launch.
             </p>
-          </div>
-          <div className={styles.video}>
-            <video src="/zapper.mp4" alt="zapper" autoPlay loop muted />
           </div>
         </div>
       </div>

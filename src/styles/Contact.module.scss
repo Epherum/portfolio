@@ -25,6 +25,10 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      @media screen and (max-width: 991px) {
+        font-size: 7em;
+        letter-spacing: 0.02em;
+      }
     }
     .drop {
       display: flex;
@@ -33,12 +37,18 @@
       text-align: center;
       font-size: 1em;
       margin-bottom: 0.5em;
+      @media screen and (max-width: 991px) {
+        font-size: 2em;
+      }
     }
     .email {
       font-size: min(2.1rem, 1.7vw);
       color: rgb(218, 218, 218);
       text-align: center;
       text-decoration: none;
+      @media screen and (max-width: 991px) {
+        font-size: 3em;
+      }
     }
   }
   .left {
@@ -50,6 +60,9 @@
     & > p:first-child {
       margin-bottom: min(0.5rem, 0.6vw);
     }
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
   .right {
     position: absolute;
@@ -59,6 +72,14 @@
     text-align: right;
     & > p:first-child {
       margin-bottom: min(0.5rem, 0.6vw);
+    }
+    @media screen and (max-width: 991px) {
+      //center it
+      bottom: 2em;
+      right: 50%;
+      transform: translateX(50%);
+      text-align: center;
+      font-size: 2em;
     }
   }
   .buttons {
@@ -71,6 +92,13 @@
     align-items: center;
     text-align: center;
     gap: min(1rem, 0.8vw);
+    @media screen and (max-width: 991px) {
+      //center it
+      bottom: 15em;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
     .button {
       background-color: transparent;
       margin: 0 min(1rem, 0.8vw);
@@ -81,6 +109,10 @@
       color: rgb(218, 218, 218);
       text-decoration: none;
       transition: all 0.2s ease-in-out;
+      @media screen and (max-width: 991px) {
+        font-size: 1.7em;
+        padding: 1em 2.5em;
+      }
 
       &:hover {
         background-color: rgb(218, 218, 218);

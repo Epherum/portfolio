@@ -7,6 +7,18 @@
   padding: 10em 4em 7em;
   justify-content: space-between;
   color: rgb(218, 218, 218);
+  @media screen and (max-width: 991px) {
+    display: flex;
+    overflow: hidden;
+    padding-right: 5em;
+    padding-left: 11.5em;
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: 5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .mainLeft {
     position: relative;
     z-index: 9;
@@ -17,6 +29,16 @@
     justify-content: center;
     grid-column-gap: 4em;
     grid-row-gap: 4em;
+    @media screen and (max-width: 991px) {
+      display: flex;
+      width: 18.5em;
+      padding-top: 8em;
+      padding-bottom: 0em;
+      justify-content: flex-start;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
     .title {
       margin-top: 20px;
       margin-bottom: 10px;
@@ -27,6 +49,13 @@
       font-weight: 400;
       text-transform: uppercase;
       white-space: nowrap;
+      @media screen and (max-width: 991px) {
+        font-size: 8em;
+      }
+      @media screen and (max-width: 767px) {
+        text-align: center;
+        font-size: 10em;
+      }
     }
     .links {
       display: flex;
@@ -35,11 +64,19 @@
       grid-column-gap: 1em;
       grid-row-gap: 1em;
       margin-left: 45px;
+      @media screen and (max-width: 991px) {
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+        font-size: 1.7em;
+        margin-left: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
       a {
         transition: opacity 200ms ease;
         color: rgb(218, 218, 218);
         font-family: "Ade", sans-serif;
-
         text-decoration: none;
         max-width: 100%;
         display: inline-block;
@@ -51,6 +88,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 991px) {
+      display: flex;
+    }
+    @media screen and (max-width: 767px) {
+      height: 60em;
+    }
     .selfie {
       position: relative;
       z-index: 3;
@@ -58,7 +101,15 @@
       height: 32em;
       border-radius: 50%;
       overflow: hidden;
-      //flip
+      @media screen and (max-width: 991px) {
+        position: absolute;
+        width: 45em;
+        height: 45em;
+      }
+      @media screen and (max-width: 767px) {
+        width: 73em;
+        height: 73em;
+      }
       img {
         transform: scaleX(-1);
         width: 100%;
@@ -74,6 +125,16 @@
       max-width: 100%;
       vertical-align: middle;
       display: inline-block;
+      @media screen and (max-width: 991px) {
+        width: 21em;
+        margin-top: 21em;
+        margin-right: 40em;
+      }
+      @media screen and (max-width: 767px) {
+        width: 35em;
+        margin-top: 40em;
+        margin-right: 54em;
+      }
     }
     .smallStar {
       position: absolute;
@@ -83,6 +144,16 @@
       max-width: 100%;
       vertical-align: middle;
       display: inline-block;
+      @media screen and (max-width: 991px) {
+        width: 5em;
+        margin-bottom: 46em;
+        margin-left: 32em;
+      }
+      @media screen and (max-width: 767px) {
+        width: 7em;
+        margin-bottom: 48em;
+        margin-left: 72em;
+      }
     }
   }
   .mainRight {
@@ -96,6 +167,18 @@
     align-items: flex-end;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
+
+    @media screen and (max-width: 991px) {
+      display: flex;
+      width: 25em;
+      padding-top: 0em;
+      padding-bottom: 2em;
+      justify-content: flex-end;
+    }
+    @media screen and (max-width: 767px) {
+      width: 65%;
+      align-items: center;
+    }
     .hero_h2 {
       width: 100%;
       margin-top: 20px;
@@ -105,18 +188,36 @@
       line-height: 1;
       font-weight: 400;
       text-transform: uppercase;
-      @media screen and (min-width: 1440px) {
-        .hero_h2_1 {
-          padding-left: 0.1em;
-        }
+      @media screen and (max-width: 991px) {
+        font-size: 6em;
+        display: block;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 8em;
+        text-align: center;
+      }
+      .hero_h2_1 {
+        padding-left: 0.1em;
       }
       .hero_h2_2 {
         position: relative;
         left: -4.75em;
+        @media screen and (max-width: 991px) {
+          display: block;
+        }
+        @media screen and (max-width: 767px) {
+          left: 0em;
+        }
       }
       .hero_h2_3 {
         position: relative;
         left: -3.2em;
+        @media screen and (max-width: 991px) {
+          display: block;
+        }
+        @media screen and (max-width: 767px) {
+          left: 0em;
+        }
       }
     }
     .description {
@@ -125,6 +226,14 @@
       line-height: 1.5em;
       font-family: "Montreal-light";
       width: 13em;
+      @media screen and (max-width: 991px) {
+        font-size: 2em;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 3em;
+        text-align: center;
+        margin-right: 0;
+      }
     }
   }
   .black,
@@ -139,6 +248,12 @@
     background-color: transparent;
     border: 0;
     border-bottom: 3px solid rgb(218, 218, 218);
+    @media screen and (max-width: 991px) {
+      font-size: 1.4em;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 2em;
+    }
   }
   .color {
     border-bottom: 0;

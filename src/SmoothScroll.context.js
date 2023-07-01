@@ -19,6 +19,12 @@ export const SmoothScrollProvider = ({ children, options }) => {
             new LocomotiveScroll({
               el:
                 document.querySelector("[data-scroll-container]") ?? undefined,
+              tablet: {
+                smooth: true,
+              },
+              smartphone: {
+                smooth: true,
+              },
               ...options,
             })
           );
